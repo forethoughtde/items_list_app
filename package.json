@@ -1,0 +1,17 @@
+{
+  "name": "stock_list_app",
+  "version": "1.0.0",
+  "description": "The app takes data from an array and renders in a table. Users have options to search for items by name and filter by stock availability.",
+  "main": "script.js",
+  "dependencies": {
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Karthikeyan Palaniswamy",
+  "license": "ISC"
+}
