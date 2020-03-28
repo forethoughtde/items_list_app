@@ -7,32 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stock Search App</title>
     <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="form-group">
-            <label class="form-label" for="searchProducts">Search</label>
-            <input class="form-input" type="text" id="searchProducts" placeholder="Search...">
-        </div>
-        <div class="form-group">
-            <label class="form-switch">
-                <input type="checkbox" id="showStockedItem">
-                <i class="form-icon"></i> Only show products in stock
-            </label>
-        </div>
-        <div class="ssa_items_list">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <section>
+            <div class="form-group">
+                <label class="form-label" for="searchProducts">Search</label>
+                <input class="form-input" type="text" id="searchProducts" placeholder="Search...">
+            </div>
+            <div class="form-group">
+                <label class="form-switch">
+                    <input type="checkbox" id="showStockedItem">
+                    <i class="form-icon"></i> Only show products in stock
+                </label>
+            </div>
+            <div class="ssa_items_list">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-            </table>
-        </div>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <p class="text-primary text-center"><a href="https://musing.buildwithpk.com/">built by pk</a></p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
