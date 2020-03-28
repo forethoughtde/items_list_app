@@ -55,7 +55,7 @@
 
         let htmlStructure = ``;
         for (let i of listCategoriesFromData(data)) {
-            htmlStructure += `<tr><td colspan="2">${i}</td></tr>`;
+            htmlStructure += `<tr><td colspan="2"><strong>${i}</strong></td></tr>`;
             for (let j of getItemsFromCategory(data, i, inStock)) {
                 htmlStructure += `<tr><td>${j['name']}</td><td>${j['price']}</td></tr>`;
             }

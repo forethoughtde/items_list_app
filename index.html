@@ -6,22 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stock Search App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre.min.css">
 </head>
 <body>
-    <div class="ssa_wrapper">
-        <div class="ssa_input_search_container">
-            <label>
-                <input type="text" id="searchProducts" placeholder="Search...">
-            </label>
+    <div class="container">
+        <div class="form-group">
+            <label class="form-label" for="searchProducts">Search</label>
+            <input class="form-input" type="text" id="searchProducts" placeholder="Search...">
         </div>
-        <div class="ssa_input_stock_only_option">
-            <label>
-                <input type="checkbox" id="showStockedItem"> Only show products in stock
+        <div class="form-group">
+            <label class="form-switch">
+                <input type="checkbox" id="showStockedItem">
+                <i class="form-icon"></i> Only show products in stock
             </label>
         </div>
         <div class="ssa_items_list">
-            <table>
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>Name</th>
