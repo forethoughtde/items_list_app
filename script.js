@@ -11,6 +11,7 @@
 
     const $stockElement = document.getElementById('showStockedItem');
     const $searchInput = document.getElementById('searchProducts');
+    let filterData = [];
 
     const listCategoriesFromData = (data)=>{
 
@@ -55,8 +56,12 @@
 
         let htmlStructure = ``;
         for (let i of listCategoriesFromData(data)) {
-            htmlStructure += `<tr><td colspan="2"><strong>${i}</strong></td></tr>`;
+            htmlStructure += `<tr><td colspan="2" class="text-primary"><strong>${i}</strong></td></tr>`;
             for (let j of getItemsFromCategory(data, i, inStock)) {
+                if (!j['stocked']) {
+                    htmlStructure += `<tr class="text-gray"><td>${j['name']}</td><td>${j['price']}</td></tr>`;
+                    continue;
+                }
                 htmlStructure += `<tr><td>${j['name']}</td><td>${j['price']}</td></tr>`;
             }
         }
@@ -71,25 +76,23 @@
     appendToTableBody(buildHTMLStructureOfItems(data));
 
     $stockElement.addEventListener('change', function(){
-
+        let fData = filterData.length ? filterData : data;
         if (this.checked) {
-            appendToTableBody(buildHTMLStructureOfItems(data, true));
+            appendToTableBody(buildHTMLStructureOfItems(fData, true));
             return;
         }
-        appendToTableBody(buildHTMLStructureOfItems(data));
+        appendToTableBody(buildHTMLStructureOfItems(fData));
     });
 
     $searchInput.addEventListener('input', function(){
 
-        let filterData = [];
+        filterData = [];
         for (let row of data) {
             if (row['name'].toLowerCase().indexOf(this.value.toLowerCase()) > -1) {
                 filterData.push(row);
             }
-
         }
         appendToTableBody(buildHTMLStructureOfItems(filterData, $stockElement.checked));
-        // return filterData;
     });
 
 })();
