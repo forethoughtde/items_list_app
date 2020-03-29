@@ -8,8 +8,10 @@ p{
 	flex-direction: column;
 }
 
-section{
-	flex: 1;
-	min-height: calc(100vh - 44px);
+.hero-lg{
+	background-image: url(https://legartis.ai/wp-content/uploads/2019/09/Product_legartis_search.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
